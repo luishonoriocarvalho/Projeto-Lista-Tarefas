@@ -86,7 +86,7 @@ router.post('/update', function(req, res) {
     getDb()
       .db()
       .collection('notes')
-      .updateOne({_id: id}, { $set: { title: title, desc: description } })
+      .updateOne({_id: id}, { $set: { title: title, description: description } })
     
     res.redirect('/');
   
